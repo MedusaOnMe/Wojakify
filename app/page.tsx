@@ -111,6 +111,11 @@ export default function Home() {
   return (
     <main className="min-h-screen py-8 px-4">
       <div className="max-w-4xl mx-auto">
+        {/* CA Banner */}
+        <div className="text-center mb-4">
+          <p className="font-bold text-gray-700">CA: coming soon</p>
+        </div>
+
         {/* Header */}
         <header className="text-center mb-8">
           <h1 className="text-6xl font-bold text-gray-800 mb-2" style={{ textShadow: '4px 4px 0 #4a90a4' }}>
@@ -254,7 +259,6 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="text-center mt-12 text-gray-500 text-sm">
-          <p className="font-bold text-gray-700 mb-1">CA: coming soon</p>
           <p>powered by feels</p>
         </footer>
       </div>

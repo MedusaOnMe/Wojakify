@@ -254,6 +254,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="text-center mt-12 text-gray-500 text-sm">
+          <p className="font-bold text-gray-700 mb-1">CA: coming soon</p>
           <p>powered by feels</p>
         </footer>
       </div>

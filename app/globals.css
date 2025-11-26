@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fafafa;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.wojak-border {
+  border: 3px solid #333;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 #333;
+}
+
+.wojak-button {
+  background: linear-gradient(180deg, #4a90a4 0%, #3a7a94 100%);
+  border: 3px solid #333;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 #333;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.wojak-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #333;
+}
+
+.wojak-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #333;
+}
+
+.wojak-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.upload-zone {
+  border: 4px dashed #333;
+  border-radius: 8px;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.upload-zone:hover {
+  border-color: #4a90a4;
+  background: #f0f8ff;
+}
+
+.upload-zone.dragover {
+  border-color: #4a90a4;
+  background: #e0f0ff;
+  transform: scale(1.02);
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.wobble {
+  animation: wobble 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}

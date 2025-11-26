@@ -23,7 +23,11 @@ export async function transformToWojak(imageBuffer: Buffer): Promise<Buffer> {
   });
 
   // Get the image data
-  const imageData = response.data[0];
+  const imageData = response.data?.[0];
+
+  if (!imageData) {
+    throw new Error('No image data returned from OpenAI');
+  }
 
   if (imageData.b64_json) {
     return Buffer.from(imageData.b64_json, 'base64');
@@ -34,5 +38,5 @@ export async function transformToWojak(imageBuffer: Buffer): Promise<Buffer> {
     return Buffer.from(arrayBuffer);
   }
 
-  throw new Error('No image data returned from OpenAI');
+  throw new Error('No image URL or base64 data returned');
 }

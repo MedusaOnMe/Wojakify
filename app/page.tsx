@@ -124,7 +124,7 @@ export default function Home() {
           <p className="text-xl text-gray-600">transform any image into a wojak meme</p>
           <p className="text-sm text-gray-500 mt-1">tfw you become a feels guy</p>
           <a
-            href="https://x.com/WojakifySol"
+            href="https://x.com/WojakifyOnSol"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-3 p-2 hover:bg-gray-100 rounded-full transition-colors"
